@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+
+    app:layout_constraintHorizontal_chainStyle="packed" 으로 좌우컨텐츠 모이게하고
+    app:layout_constraintHorizontal_bias="0" 0값으로 왼쪽에 붙게
+    layout_constrainedWidth 값으로 해결
+    -->
+
+    <TextView
+        android:id="@+id/text1"
+        android:text="5,0ㅁㄴ0ㅇ000,000,000,00,0,00,0,0,00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button1" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="원"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
